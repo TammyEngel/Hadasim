@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Conference Registration</h1>
+            <p>Choose your ticket and join our conference!</p>
+            <p class="hint">Fields marked with * are required.</p>
+        </header>
+
+        <form method="post" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="full-name">Full Name *</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="fullName"
+                        required
+                        minlength="2"
+                        pattern="(?=.*\p{L}.*\p{L}).+"
+                        autocomplete="name"
+                        aria-describedby="name-help name-error">
+
+                    <small id="name-help">
+                        Your name must contain at least two letters.
+                    </small>
+
+                    <p id="name-error" class="error">
+                        Please enter a name containing at least two letters.
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        autocomplete="email"
+                        aria-describedby="email-error">
+
+                    <p id="email-error" class="error">
+                        Please enter a valid email address.
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        pattern="\+?(?:[0-9][ ()\-]*){7,15}"
+                        autocomplete="tel"
+                        aria-describedby="phone-help phone-error">
+
+                    <small id="phone-help">
+                        Enter 7–15 digits. Spaces, hyphens, parentheses
+                        and an initial + are allowed.
+                    </small>
+
+                    <p id="phone-error" class="error">
+                        Please enter a phone number in the specified format.
+                    </p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Ticket &amp; Workshops</legend>
+
+                <div class="form-group">
+                    <label for="ticket">Ticket Type *</label>
+                    <select
+                        id="ticket"
+                        name="ticket"
+                        required
+                        aria-describedby="ticket-error">
+
+                        <option value="">Choose a ticket</option>
+                        <option value="standard">Standard</option>
+                        <option value="vip">VIP</option>
+                        <option value="student">Student</option>
+                    </select>
+
+                    <p id="ticket-error" class="error">
+                        Please choose a ticket type.
+                    </p>
+                </div>
+
+                <div class="form-group" role="group"
+                    aria-labelledby="workshops-heading">
+
+                    <h2 id="workshops-heading">Workshops</h2>
+
+                    <label for="web-performance" class="choice">
+                        <input
+                            type="checkbox"
+                            id="web-performance"
+                            name="workshops"
+                            value="web-performance">
+                        Web Performance
+                    </label>
+
+                    <label for="accessibility" class="choice">
+                        <input
+                            type="checkbox"
+                            id="accessibility"
+                            name="workshops"
+                            value="accessibility">
+                        Accessibility
+                    </label>
+
+                    <label for="testing" class="choice">
+                        <input
+                            type="checkbox"
+                            id="testing"
+                            name="workshops"
+                            value="testing">
+                        Testing
+                    </label>
+                </div>
+
+                <div class="form-group" role="radiogroup"
+                    aria-labelledby="diet-heading">
+
+                    <h2 id="diet-heading">Diet</h2>
+
+                    <label for="diet-none" class="choice">
+                        <input
+                            type="radio"
+                            id="diet-none"
+                            name="diet"
+                            value="none"
+                            checked>
+                        None
+                    </label>
+
+                    <label for="diet-vegan" class="choice">
+                        <input
+                            type="radio"
+                            id="diet-vegan"
+                            name="diet"
+                            value="vegan">
+                        Vegan
+                    </label>
+
+                    <label for="diet-kosher" class="choice">
+                        <input
+                            type="radio"
+                            id="diet-kosher"
+                            name="diet"
+                            value="kosher">
+                        Kosher
+                    </label>
+
+                    <label for="diet-halal" class="choice">
+                        <input
+                            type="radio"
+                            id="diet-halal"
+                            name="diet"
+                            value="halal">
+                        Halal
+                    </label>
+
+                    <label for="diet-other" class="choice">
+                        <input
+                            type="radio"
+                            id="diet-other"
+                            name="diet"
+                            value="other"
+                            aria-controls="diet-details-group">
+                        Other
+                    </label>
+                </div>
+
+                <div id="diet-details-group" class="form-group">
+                    <label for="diet-details">Diet Details</label>
+                    <input
+                        type="text"
+                        id="diet-details"
+                        name="dietDetails"
+                        aria-describedby="diet-details-help">
+
+                    <small id="diet-details-help">
+                        Please describe your dietary requirements
+                        if you selected Other.
+                    </small>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Details</legend>
+
+                <p class="hint">For this exercise, use sample card details.</p>
+
+                <div class="form-group">
+                    <label for="card-number">Card Number *</label>
+                    <input
+                        type="text"
+                        id="card-number"
+                        name="cardNumber"
+                        required
+                        inputmode="numeric"
+                        pattern="(?: *[0-9]){13,19} *"
+                        autocomplete="cc-number"
+                        aria-describedby="card-help card-error">
+
+                    <small id="card-help">
+                        Enter 13–19 digits. Spaces are allowed.
+                    </small>
+
+                    <p id="card-error" class="error">
+                        Please enter 13–19 digits, with optional spaces.
+                    </p>
+                </div>
+
+                <div class="payment-row">
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date *</label>
+                        <input
+                            type="month"
+                            id="expiry"
+                            name="expiry"
+                            required
+                            min="2026-10"
+                            autocomplete="cc-exp"
+                            aria-describedby="expiry-help expiry-error">
+
+                        <small id="expiry-help">
+                            Choose October 2026 or later.
+                        </small>
+
+                        <p id="expiry-error" class="error">
+                            Please choose October 2026 or a later month.
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV *</label>
+                        <input
+                            type="password"
+                            id="cvv"
+                            name="cvv"
+                            required
+                            inputmode="numeric"
+                            minlength="3"
+                            maxlength="4"
+                            pattern="[0-9]{3,4}"
+                            autocomplete="cc-csc"
+                            aria-describedby="cvv-help cvv-error">
+
+                        <small id="cvv-help">
+                            Enter 3–4 digits.
+                        </small>
+
+                        <p id="cvv-error" class="error">
+                            Please enter a CVV containing 3–4 digits.
+                        </p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Agreements</legend>
+
+                <div id="student-id-group" class="form-group">
+                    <label for="student-id">Student ID</label>
+                    <input
+                        type="file"
+                        id="student-id"
+                        name="studentId"
+                        accept=".pdf,.jpg,.jpeg,.png"
+                        aria-describedby="student-help">
+
+                    <small id="student-help">
+                        If you selected Student, please upload your
+                        student ID as a PDF, JPG or PNG.
+                    </small>
+                </div>
+
+                <details>
+                    <summary>Terms and Conditions</summary>
+                    <p>
+                        This is a practice registration form.
+                        It does not process payments or reserve tickets.
+                    </p>
+                </details>
+
+                <div class="form-group">
+                    <label for="terms" class="choice">
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            value="accepted"
+                            required
+                            aria-describedby="terms-error">
+                        I agree to the Terms and Conditions *
+                    </label>
+
+                    <p id="terms-error" class="error">
+                        You must agree to the Terms and Conditions.
+                    </p>
+                </div>
+            </fieldset>
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eef2f7;
+    color: #243047;
+}
+
+main {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    margin-bottom: 28px;
+}
+
+h1 {
+    margin-top: 0;
+    color: #3454a5;
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+fieldset {
+    margin-bottom: 24px;
+    padding: 22px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+}
+
+legend {
+    padding: 0 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3454a5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+    font: inherit;
+    color: inherit;
+    background-color: white;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: #3454a5;
+}
+
+small,
+.hint {
+    display: block;
+    color: #526079;
+    font-size: 13px;
+}
+
+small {
+    margin-top: 5px;
+}
+
+.payment-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #92b4ff;
+    outline-offset: 3px;
+}
+
+/* Show errors after the user interacts with an invalid field. */
+.error {
+    display: none;
+    margin: 5px 0 0;
+    color: #b42318;
+    font-size: 13px;
+}
+
+input:user-invalid,
+select:user-invalid {
+    border-color: #b42318;
+}
+
+.form-group:has(input:user-invalid) > .error,
+.form-group:has(select:user-invalid) > .error {
+    display: block;
+}
+
+/*
+   Hide conditional fields when their conditions are not selected.
+   Browsers without :has() support leave these fields visible.
+*/
+form:not(:has(#diet-other:checked)) #diet-details-group {
+    display: none;
+}
+
+form:not(:has(#ticket option[value="student"]:checked)) #student-id-group {
+    display: none;
+}
+
+details {
+    margin-bottom: 18px;
+}
+
+summary {
+    color: #3454a5;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3454a5;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #243b78;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    fieldset {
+        padding: 16px;
+    }
+
+    .payment-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
