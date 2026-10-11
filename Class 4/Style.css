@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+}
+
+
+/* ---------------- TOP NAV ---------------- */
+
+.top-nav {
+    width: 100%;
+    height: 40px;
+    background: #263233;
+
+    direction: rtl;
+    text-align: center;
+
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.top-nav a {
+    display: inline-block;
+
+    width: 8%;
+
+    color: #f3efe8;
+    text-decoration: none;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    text-align: center;
+
+    padding: 10px 0 4px 0;
+
+    border-bottom: 2px solid #b7c6c5;
+
+    box-sizing: border-box;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ---------------- NEWS SECTION ---------------- */
+
+.news-section {
+    width: 95%;
+
+    margin: 60px auto 0 auto;
+
+    direction: rtl;
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------- NEWS HEADER ---------------- */
+
+.news-header {
+    width: 100%;
+
+    border-bottom: 1px solid #263233;
+
+    direction: rtl;
+    text-align: right;
+
+    box-sizing: border-box;
+}
+
+.news-header h2 {
+    display: inline-block;
+
+    margin: 0;
+
+    background: #d90429;
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    padding: 4px 12px;
+
+    box-sizing: border-box;
+}
+
+.news-header a {
+    display: inline-block;
+
+    width: 88%;
+
+    text-align: left;
+
+    color: #263233;
+    text-decoration: none;
+
+    font-weight: bold;
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------- BREAKING NEWS ---------------- */
+
+.breaking-news {
+    width: 100%;
+
+    direction: rtl;
+    text-align: center;
+
+    border-bottom: 6px solid #263233;
+
+    padding: 20px 0;
+
+    box-sizing: border-box;
+
+    font-size: 0;
+}
+
+.update {
+    display: inline-block;
+
+    width: 16%;
+
+    padding: 0 12px;
+
+    border-left: 1px solid #bfbfbf;
+
+    box-sizing: border-box;
+
+    vertical-align: top;
+
+    font-size: 16px;
+}
+
+.update:last-child {
+    border-left: none;
+}
+
+.time {
+    display: inline-block;
+
+    background: #d90429;
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 3px 8px;
+
+    margin-bottom: 10px;
+}
+
+.update p {
+    margin: 0;
+
+    color: #263233;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+}
+
+
+/* ---------------- TICKER CONTROLS ---------------- */
+
+.ticker-controls {
+    width: 100%;
+
+    text-align: left;
+
+    padding-top: 8px;
+
+    box-sizing: border-box;
+}
+
+.ticker-controls a {
+    display: inline-block;
+
+    width: 22px;
+    height: 22px;
+
+    line-height: 22px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    color: white;
+    background: #263233;
+
+    margin-left: 4px;
+
+    font-size: 12px;
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------- MAIN STORY ---------------- */
+
+.main-story {
+    width: 90%;
+
+    margin: 40px auto 0 auto;
+
+    direction: rtl;
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------- STORY TEXT ---------------- */
+
+.story-text {
+    display: inline-block;
+
+    width: 48%;
+
+    vertical-align: top;
+
+    padding-left: 25px;
+
+    box-sizing: border-box;
+
+    text-align: right;
+}
+
+
+/* ---------------- STORY IMAGE ---------------- */
+
+.story-image {
+    display: inline-block;
+
+    width: 48%;
+
+    vertical-align: top;
+
+    box-sizing: border-box;
+}
+
+.story-image img {
+    width: 100%;
+
+    display: block;
+
+    border-bottom: 5px solid #d20a2e;
+}
+
+
+/* ---------------- CATEGORY ---------------- */
+
+.category {
+    display: inline-block;
+
+    background: #d20a2e;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 5px 10px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ---------------- TITLE ---------------- */
+
+.story-text h1 {
+    font-size: 42px;
+
+    line-height: 1.4;
+
+    margin: 15px 0;
+
+    color: white;
+}
+
+.story-text h1 span {
+    display: inline-block;
+
+    background: #263233;
+
+    padding: 4px 10px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ---------------- SUMMARY ---------------- */
+
+.summary {
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #263233;
+
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+/* ---------------- AUTHOR ---------------- */
+
+.author {
+    font-size: 14px;
+
+    color: #999;
+
+    margin-bottom: 0;
+}
