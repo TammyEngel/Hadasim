@@ -1,0 +1,235 @@
+/* ================= GOOGLE FONTS ================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+
+/* ================= RESET ================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ================= BODY ================= */
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f3f3f3;
+    color: #222;
+}
+
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto;
+}
+
+
+h1 {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+/* ================= GRID ================= */
+
+.posts-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================= CARD ================= */
+
+.card {
+    position: relative;
+}
+
+
+/* ================= HIDE CHECKBOX ================= */
+
+.dark-toggle {
+    position: absolute;
+
+    opacity: 0;
+}
+
+
+/* ================= CARD CONTENT ================= */
+
+.card-content {
+    height: 100%;
+
+    padding: 25px;
+
+    background-color: white;
+    color: #222;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+
+.card-content h2 {
+    margin-top: 0;
+}
+
+
+/* ================= PARAGRAPHS ================= */
+
+.card-content p {
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* Different Google Font for every paragraph */
+
+.paragraph-one {
+    font-family: "Lora", serif;
+}
+
+
+.paragraph-two {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.paragraph-three {
+    font-family: "Roboto Slab", serif;
+}
+
+
+/* ================= FIRST LETTER ================= */
+
+.card-content p::first-letter {
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #7a48d1;
+}
+
+
+/* ================= FIRST LINE ================= */
+
+.card-content p::first-line {
+    font-weight: bold;
+
+    color: #444;
+}
+
+
+/* ================= CARD ACTIONS ================= */
+
+.card-actions {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* ================= DARK MODE LABEL ================= */
+
+.card-actions label {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    background-color: #eeeeee;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+/* ================= DELETE BUTTON ================= */
+
+.delete-button {
+    padding: 8px 16px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #444;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+/* Bright red on hover */
+
+.delete-button:hover {
+    background-color: #ff0000;
+}
+
+
+/* ================= DARK MODE ================= */
+
+.dark-toggle:checked + .card-content {
+    background-color: #222;
+
+    color: white;
+}
+
+
+.dark-toggle:checked + .card-content p::first-line {
+    color: #dddddd;
+}
+
+
+.dark-toggle:checked + .card-content label {
+    background-color: #555;
+
+    color: white;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
