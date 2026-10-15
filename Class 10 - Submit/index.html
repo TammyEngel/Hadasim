@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>SIGINT OPS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER
+    ========================== -->
+<header class="top-header">
+  <div class="header-icon">
+    <img
+      src="assets/icons/unnamed.png"
+      alt="Shield icon"
+      class="shield-image"
+    />
+  </div>
+
+  <h1 class="header-title">
+    SIGINT OPS
+  </h1>
+
+  <div class="secure-status">
+    <span class="secure-dot"></span>
+    <span>SECURE • ONLINE</span>
+  </div>
+</header>
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="dashboard">
+      <!-- =========================
+           OVERVIEW PANEL
+      ========================== -->
+
+      <section class="overview-panel">
+        <div class="radar-wrapper">
+          <div class="radar">
+            <div class="radar-sweep"></div>
+
+            <span class="radar-dot dot-one"></span>
+            <span class="radar-dot dot-two"></span>
+            <span class="radar-dot dot-three"></span>
+          </div>
+        </div>
+
+        <div class="signal-info">
+          <div class="signal-stat">
+            <span class="signal-number">
+              24
+            </span>
+
+            <span class="signal-label">
+              ACTIVE SIGNALS
+            </span>
+          </div>
+
+          <div class="signal-stat">
+            <span class="signal-number">
+              07
+            </span>
+
+            <span class="signal-label">
+              PRIORITY ALERTS
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           ACTION BUTTONS
+      ========================== -->
+
+      <section class="action-buttons">
+        <button class="action-button">
+          <span class="button-icon">⚡</span>
+          <span>New Brief</span>
+        </button>
+
+        <button class="action-button">
+          <span class="button-icon">&lt;&gt;</span>
+          <span>Decode</span>
+        </button>
+
+        <button class="action-button">
+          <span class="button-icon">✈</span>
+          <span>Request Drone</span>
+        </button>
+      </section>
+
+      <!-- =========================
+           CARDS
+      ========================== -->
+
+      <section class="operations-grid">
+        <article class="operation-card">
+          <div class="card-top">
+            <span class="priority critical">
+              CRITICAL
+            </span>
+
+            <span class="card-status">
+              In Progress
+            </span>
+          </div>
+
+          <h2>Operation Nightfall</h2>
+
+          <div class="progress-section">
+            <div class="progress-track">
+              <div
+                class="progress-bar"
+                style="--progress: 65%"
+              ></div>
+            </div>
+
+            <span class="progress-text">65%</span>
+          </div>
+        </article>
+
+        <article class="operation-card">
+          <div class="card-top">
+            <span class="priority high">
+              HIGH
+            </span>
+
+            <span class="card-status">
+              Analyzing
+            </span>
+          </div>
+
+          <h2>Signal Intercept Alpha</h2>
+
+          <div class="progress-section">
+            <div class="progress-track">
+              <div
+                class="progress-bar"
+                style="--progress: 40%"
+              ></div>
+            </div>
+
+            <span class="progress-text">40%</span>
+          </div>
+        </article>
+
+        <article class="operation-card">
+          <div class="card-top">
+            <span class="priority medium">
+              MEDIUM
+            </span>
+
+            <span class="card-status">
+              Pending
+            </span>
+          </div>
+
+          <h2>Asset Recovery</h2>
+
+          <div class="progress-section">
+            <div class="progress-track">
+              <div
+                class="progress-bar"
+                style="--progress: 15%"
+              ></div>
+            </div>
+
+            <span class="progress-text">15%</span>
+          </div>
+        </article>
+
+        <article class="operation-card">
+          <div class="card-top">
+            <span class="priority high">
+              HIGH
+            </span>
+
+            <span class="card-status">
+              Active
+            </span>
+          </div>
+
+          <h2>Cyber Defense Grid</h2>
+
+          <div class="progress-section">
+            <div class="progress-track">
+              <div
+                class="progress-bar"
+                style="--progress: 80%"
+              ></div>
+            </div>
+
+            <span class="progress-text">80%</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- =========================
+           THREAT ALERT
+      ========================== -->
+
+      <section class="threat-alert">
+        <span class="threat-dot"></span>
+        <strong>THREAT DETECTED</strong>
+      </section>
+    </main>
+
+    <!-- =========================
+         BOTTOM NAV
+    ========================== -->
+
+    <nav class="bottom-nav">
+      <a
+        href="#"
+        class="nav-link active"
+      >
+        <span class="nav-icon">ϟ</span>
+        <span>Dashboard</span>
+      </a>
+
+      <a
+        href="#"
+        class="nav-link"
+      >
+        <span class="nav-icon">((•))</span>
+        <span>Feed</span>
+      </a>
+
+      <a
+        href="#"
+        class="nav-link"
+      >
+        <span class="nav-icon">▤</span>
+        <span>Brief</span>
+      </a>
+
+      <button
+        class="help-button"
+        aria-label="Help"
+      >
+        ?
+      </button>
+    </nav>
+  </body>
+</html>
